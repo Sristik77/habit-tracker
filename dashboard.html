@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard - Habit Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <h2>Habit Tracker</h2>
+  <nav>
+    <a href="dashboard.html">Home</a>
+    <a href="analytics.html">Analytics</a>
+    <a href="quotes.html">Motivation</a>
+    <button id="logoutBtn" class="btn small">Logout</button>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <section class="card add-card">
+    <form id="addForm" class="row">
+      <input id="title" type="text" placeholder="New habit (e.g. Read 20 pages)" required />
+      <input id="color" type="color" value="#4CAF50" />
+      <button class="btn primary" type="submit">Add</button>
+    </form>
+  </section>
+
+  <section id="stats" class="card stats-card"></section>
+
+  <section id="habits" class="grid"></section>
+
+</div>
+
+<script src="auth.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
