@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="topbar">
+      <h1>Habit Tracker</h1>
+      <p class="subtitle">Build habits. Track progress. Stay consistent.</p>
+    </header>
+
+    <section class="card add-card">
+      <form id="addForm" class="row">
+        <input id="title" type="text" placeholder="New habit (e.g. Read 20 pages)" required />
+        <input id="color" type="color" value="#4CAF50" title="Pick a color" />
+        <button class="btn primary" type="submit">Add</button>
+      </form>
+    </section>
+
+    <section id="stats" class="card stats-card" aria-live="polite">
+      <!-- summary injected by JS -->
+    </section>
+
+    <section id="habits" class="grid">
+      <!-- habit cards injected here -->
+    </section>
+
+    <footer class="footer">
+      <small>Local demo — data saved in your browser (localStorage).</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
