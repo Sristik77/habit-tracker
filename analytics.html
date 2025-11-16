@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Analytics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<header class="nav">
+  <h2>Analytics</h2>
+  <nav>
+    <a href="dashboard.html">Home</a>
+    <a href="analytics.html">Analytics</a>
+    <a href="quotes.html">Motivation</a>
+    <button id="logoutBtn" class="btn small">Logout</button>
+  </nav>
+</header>
+
+<div class="wrap">
+  <h2>Your Progress Overview</h2>
+
+  <canvas id="chart" height="180"></canvas>
+
+  <div id="summary" class="card"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="auth.js"></script>
+<script src="analytics.js"></script>
+</body>
+</html>
