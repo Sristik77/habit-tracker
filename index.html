@@ -1,39 +1,26 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Habit Tracker</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Login - Habit Tracker</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <main class="wrap">
-    <header class="topbar">
-      <h1>Habit Tracker</h1>
-      <p class="subtitle">Build habits. Track progress. Stay consistent.</p>
-    </header>
+<body class="center-screen">
 
-    <section class="card add-card">
-      <form id="addForm" class="row">
-        <input id="title" type="text" placeholder="New habit (e.g. Read 20 pages)" required />
-        <input id="color" type="color" value="#4CAF50" title="Pick a color" />
-        <button class="btn primary" type="submit">Add</button>
-      </form>
-    </section>
+  <div class="login-card">
+    <h1>Welcome</h1>
+    <p class="subtitle">Sign in to continue</p>
 
-    <section id="stats" class="card stats-card" aria-live="polite">
-      <!-- summary injected by JS -->
-    </section>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Enter username" required>
+      <input type="password" id="password" placeholder="Enter password" required>
+      <button class="btn primary" type="submit">Sign In</button>
+    </form>
 
-    <section id="habits" class="grid">
-      <!-- habit cards injected here -->
-    </section>
+    <p class="small">
+      No account? <a href="#" onclick="alert('Signup not added in demo')">Create one</a>
+    </p>
+  </div>
 
-    <footer class="footer">
-      <small>Local demo — data saved in your browser (localStorage).</small>
-    </footer>
-  </main>
-
-  <script src="app.js"></script>
+<script src="auth.js"></script>
 </body>
 </html>
