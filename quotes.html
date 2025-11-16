@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Motivation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<header class="nav">
+  <h2>Motivation</h2>
+  <nav>
+    <a href="dashboard.html">Home</a>
+    <a href="analytics.html">Analytics</a>
+    <a href="quotes.html">Motivation</a>
+    <button id="logoutBtn" class="btn small">Logout</button>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <h2>Daily Quote</h2>
+  <div id="quoteBox" class="card"></div>
+  <button class="btn primary" onclick="newQuote()">Next Quote</button>
+
+  <h2 style="margin-top:30px;">Mini Game</h2>
+  <p>Click the button before it moves!</p>
+
+  <button class="btn primary" id="gameBtn" onclick="playGame()">Catch Me!</button>
+
+</div>
+
+<script src="auth.js"></script>
+<script>
+const quotes = [
+  "Success is a habit.",
+  "Your future is created by what you do today.",
+  "Small daily improvements lead to big results.",
+  "Stay consistent.",
+  "You are stronger than your excuses."
+];
+
+function newQuote(){
+  const q = quotes[Math.floor(Math.random()*quotes.length)];
+  document.getElementById("quoteBox").innerText = q;
+}
+newQuote();
+
+function playGame(){
+  const btn = document.getElementById("gameBtn");
+  btn.style.position = "relative";
+  btn.style.left = (Math.random()*250)+"px";
+  btn.style.top = (Math.random()*150)+"px";
+}
+</script>
+</body>
+</html>
